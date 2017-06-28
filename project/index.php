@@ -1,13 +1,13 @@
 <?php
 
-use Lib\CorePhp\SplClassLoader;
+use Lib\CoreUtils\SplClassLoader;
 use Lib\HttpComponent\Request;
 use Lib\HttpComponent\Response;
 use Lib\HttpComponent\Router;
 use Lib\Controller;
 
 
-require_once __DIR__.'/Lib/CorePhp/SplClassLoader.php';
+require_once __DIR__ . '/Lib/CoreUtils/SplClassLoader.php';
 $loader = new SplClassLoader('Lib', './Lib');
 $loader->register();
 
