@@ -8,22 +8,22 @@
 
 namespace Lib;
 
+use Lib\CoreUtils\BaseController;
 use Lib\HttpComponent\Request;
-use Lib\HttpComponent\Response;
-use Lib\Templating\Templater;
 
-class Controller
+/**
+ * Class Controller
+ * @package Lib
+ */
+class Controller extends BaseController
 {
+    /**
+     * @param Request $request
+     * @return HttpComponent\Response
+     */
     public function indexAction(Request $request)
     {
         $name = $request->query->get('name', 'Ben');
         return $this->render(':index.html.php', array('name' => $name));
-    }
-
-    public function render($template, $params = null, $code = 200)
-    {
-        $fileContent = Templater::resolve($template);
-        $content     = Templater::render($fileContent, $params);
-        return new Response($content, $code);
     }
 }
