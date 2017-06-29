@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routing>
+    <config>
+        <cacheTime>3600</cacheTime>
+    </config>
+    <routes>
+        <route>
+            <path>/</path>
+            <action>index</action>
+            <method>GET</method>
+        </route>
+    </routes>
+</routing>
