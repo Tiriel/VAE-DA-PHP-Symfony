@@ -8,7 +8,7 @@
 
 namespace Lib\HttpComponent;
 
-class ServerBag
+class ServerBag extends ParameterBag
 {
     /**
      * @var string
@@ -23,25 +23,20 @@ class ServerBag
     private $_query;
 
     /**
-     * @var array
-     */
-    public $dump;
-
-    /**
      * ServerBag constructor.
      * @param $server
      */
     public function __construct($server)
     {
-        $this->_method = $_SERVER['REQUEST_METHOD'];
+        parent::__construct($server);
+        $this->_method = $this->get('REQUEST_METHOD', 'GET');
         $this->_scheme = $this->getScheme();
-        $this->_user   = null !== $_SERVER['PHP_AUTH_USER'] ? $_SERVER['PHP_AUTH_USER'] : null ;
-        $this->_pass   = null !== $_SERVER['PHP_AUTH_PW'] ? $_SERVER['PHP_AUTH_PW'] : null ;
-        $this->_host   = $_SERVER['HTTP_HOST'];
+        $this->_user   = $this->get('PHP_AUTH_USER', null);
+        $this->_pass   = $this->get('PHP_AUTH_PW', null);
+        $this->_host   = $this->get('HTTP_HOST');
         $this->_port   = $this->getPort();
-        $this->_path   = $_SERVER['SCRIPT_URL'];
-        $this->_query  = $_SERVER['QUERY_STRING'];
-        $this->dump    = $_SERVER;
+        $this->_path   = $this->get('SCRIPT_URL');
+        $this->_query  = $this->get('QUERY_STRING');
     }
 
     /**
@@ -50,7 +45,7 @@ class ServerBag
     public function getScheme()
     {
         $scheme = 'http';
-        if (false !== $_SERVER['HTTPS'] || 'https' === strtolower($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
+        if (false !== $this->get('HTTPS') || 'https' === strtolower($this->get('HTTP_X_FORWARDED_PROTO'))) {
             $scheme = 'https';
         }
         return $scheme;
@@ -61,15 +56,15 @@ class ServerBag
      */
     public function getPort()
     {
-        $port = '80' !== $_SERVER['SERVER_PORT'] ? $_SERVER['SERVER_PORT'] : null ;
+        $port = '80' !== $this->get('SERVER_PORT') ? $this->get('SERVER_PORT') : null;
 
         $default = [
             null,
             '80',
-            $_SERVER['SERVER_PORT']
+            $this->get('SERVER_PORT')
         ];
-        if (!in_array($_SERVER['HTTP_X_FORWARDED_PORT'], $default)) {
-            $port = $_SERVER['HTTP_X_FORWARDED_PORT'];
+        if ($this->get('HTTP_X_FORWARDED_PROTO') && !in_array($this->get('HTTP_X_FORWARDED_PROTO'), $default)) {
+            $port = $this->get('HTTP_X_FORWARDED_PROTO');
         }
 
         return $port;

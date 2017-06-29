@@ -13,17 +13,17 @@ use Lib\Exceptions\MethodUnknownException;
 class Request
 {
     /**
-     * @var array
+     * @var ParameterBag
      */
     public $query;
 
     /**
-     * @var array
+     * @var ParameterBag
      */
     public $body;
 
     /**
-     * @var array
+     * @var ParameterBag
      */
     public $cookies;
 
@@ -71,9 +71,9 @@ class Request
             $this->$method($decomposed[$part]);
         }
 
-        $this->query   = $_GET;
-        $this->body    = $_POST;
-        $this->cookies = $_COOKIE;
+        $this->query   = new ParameterBag($_GET);
+        $this->body    = new ParameterBag($_POST);
+        $this->cookies = new ParameterBag($_COOKIE);
         $this->server  = new ServerBag($_SERVER);
     }
 

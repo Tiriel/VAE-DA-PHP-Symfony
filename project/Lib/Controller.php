@@ -16,7 +16,8 @@ class Controller
 {
     public function indexAction(Request $request)
     {
-        return $this->render($template);
+        $name = $request->query->get('name', 'Ben');
+        return $this->render(':index.html.php', array('name' => $name));
     }
 
     public function render($template, $params = null, $code = 200)
