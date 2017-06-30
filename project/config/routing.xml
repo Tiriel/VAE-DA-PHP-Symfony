@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <routing>
     <config>
-        <cacheTime>3600</cacheTime>
+        <cacheTime>86400</cacheTime>
     </config>
     <routes>
         <route>

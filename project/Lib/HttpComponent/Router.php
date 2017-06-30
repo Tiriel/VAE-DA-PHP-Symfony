@@ -9,6 +9,7 @@
 namespace Lib\HttpComponent;
 
 use Lib\Controller;
+use Cache\RoutingCache;
 
 /**
  * Class Router
@@ -16,7 +17,7 @@ use Lib\Controller;
  */
 class Router
 {
-    const ROUTING_CACHE = __DIR__.'/cache/routing.php';
+    const ROUTING_CACHE = __DIR__.'/Cache/RoutingCache.php';
     const ROUTING_XML   = __DIR__.'/config/routing.xml';
 
     /**
@@ -25,18 +26,18 @@ class Router
      */
     public static function route(Request $request)
     {
-        if (!file_exists(self::ROUTING_CACHE)) {
+        if (!file_exists(self::ROUTING_CACHE) || !class_exists('RoutingCache')) {
             self::buildCache();
         }
 
         require_once self::ROUTING_CACHE;
 
-        if (!\RoutingCache::isValid()) {
+        if (!RoutingCache::isValid()) {
             self::buildCache();
         }
 
         $path    = strtolower($request->getPathInfo());
-        $action  = \RoutingCache::matchPath($path, $request->getMethod());
+        $action  = RoutingCache::matchPath($path, $request->getMethod());
         $action .= 'Action';
         $controller = new Controller();
         return $controller->$action();
@@ -63,9 +64,10 @@ class Router
             //
             $routingSnippet =
 <<<EOD
+
         if ('$route->path' === \$pathinfo) {
             \$allowedMethods = array($methodArray);
-            if (!in_array(\$method, \$allowedMethods) {
+            if (!in_array(\$method, \$allowedMethods)) {
                 throw new HttpMethodNotAllowedException(\$allowedMethods);
             }
             return '$route->action';
@@ -80,6 +82,8 @@ EOD;
 <<<EOD
 <?php
 
+namespace Cache;
+
 use Lib\Exceptions\HttpMethodNotAllowedException;
 
 class RoutingCache
@@ -87,7 +91,7 @@ class RoutingCache
     /**
      * @var int
      */
-    private \$cacheTime = $cacheTime;
+    const CACHE_TIME = $cacheTime;
     
     /**
      * Returns if cache is still valid
@@ -95,7 +99,7 @@ class RoutingCache
      */
     public static function isValid()
     {
-        return time() < self::cacheTime;
+        return time() < self::CACHE_TIME;
     }
     
     /**
