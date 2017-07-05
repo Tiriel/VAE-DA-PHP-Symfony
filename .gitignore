@@ -8,3 +8,6 @@ gen
 
 # Cache
 Cache
+
+# Mac OS
+.DS_Store
