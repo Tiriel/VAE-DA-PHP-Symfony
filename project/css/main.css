@@ -8,8 +8,24 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.spacer {
+h1, h2, h3, h4, h5, h6, .profile, .profile-nav, .company-title, .company-desc, .company-loc {
+    font-weight: 300;
+    color: deepskyblue;
+}
+
+.spacer, .banner, footer {
     width: 100%;
+}
+
+.container, .company, .mission, .skills table {
+    margin: auto;
+}
+
+.profile {
+    border-right: 2px solid deepskyblue;
+}
+
+.spacer {
     height: 30px;
 }
 
@@ -19,7 +35,6 @@ body {
 
 .container {
     width: 1280px;
-    margin: auto;
     display: flex;
 }
 
@@ -31,12 +46,9 @@ body {
     margin-left: -15px;
     padding-top: 5px;
     padding-left: 20px;
-    color: lightskyblue;
-    border-right: 2px solid deepskyblue;
 }
 
 .profile-nav li {
-    color: deepskyblue;
     list-style: none;
 }
 
@@ -48,32 +60,16 @@ body {
     border-radius: 50%;
 }
 
-h1,h2 {
-    font-weight: 300;
-    color: deepskyblue;
-}
 h1 {
     font-size: 2em;
 }
-.profile-nav h1 {
+
+.profile-nav h1, .banner h1 {
     margin-bottom: -10px;
 }
 
-.infos {
+.infos, .skills {
     font-family: 'PT Sans', sans-serif;
-}
-
-.skills {
-    font-family: 'PT Sans', sans-serif;
-}
-
-.skills h2, h3 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-}
-
-.skills table {
-    margin: auto;
 }
 
 .main {
@@ -85,25 +81,34 @@ h1 {
 .tile {
     padding-bottom: 50px;
 }
+
 .block {
     padding-top: 20px;
     border-bottom: 2px solid deepskyblue;
 }
 
 .banner {
-    width: 100%;
     padding-left: 5%;
     height: 200px;
 }
 .banner h1 {
     font-size: 2.5em;
-    margin-bottom: 0px;
 }
-.banner h2 {
-    font-size: 2em;
+
+.company, .mission {
+    width: 90%;
+}
+
+.company-loc, .company-desc {
+    margin-top: -10px;
+    line-height: 0.5em;
+}
+
+.mission-title {
+    margin-bottom: 10px;
+    margin-top: 0px;
 }
 
 footer {
-    width: 100%;
     text-align: center;
 }
