@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6, .profile, .profile-nav, .company-title, .company-desc, .
     padding-left: 20px;
 }
 
-.profile-nav li {
+li {
     list-style: none;
 }
 
