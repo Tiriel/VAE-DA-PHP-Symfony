@@ -4,13 +4,17 @@
 font-family: 'PT Sans', sans-serif;*/
 
 body {
-    color: black;
+    color: slategray;
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6, .profile, .profile-nav, .company-title, .company-desc, .company-loc {
-    font-weight: 300;
     color: deepskyblue;
+}
+
+strong {
+    font-weight: 400;
 }
 
 .spacer, .banner, footer {
