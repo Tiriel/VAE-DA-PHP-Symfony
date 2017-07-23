@@ -76,6 +76,10 @@ h1 {
     font-family: 'PT Sans', sans-serif;
 }
 
+#td-spacing {
+    padding-right: 15px;
+}
+
 .main {
     width: 80%;
     padding: 5%;
