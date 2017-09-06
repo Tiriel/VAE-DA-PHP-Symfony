@@ -27,6 +27,8 @@ strong {
 
 .profile {
     border-right: 2px solid deepskyblue;
+    margin-bottom: -800px;
+    padding-bottom: 800px;
 }
 
 .spacer {
