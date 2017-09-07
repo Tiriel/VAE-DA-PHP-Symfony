@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Festival des Films de Plein Air - Accueil</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="main">
+    <nav>
+        <div class="logo">
+            <h1>
+                Festival des Films de Plein Air
+            </h1>
+            <h4>
+                Parc Monceau, Paris, 5 au 8 août
+            </h4>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="films.html">Les films</a></li>
+            <li><a href="blog.html">Annonces</a></li>
+            <li><a href="inscriptions.html">Pré inscription</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <section>
+            <article id="inscriptions">
+                <h1>Pré inscriptions</h1>
+                <form action="">
+                    <div class="field">
+                        <label for="email">Adresse email :</label>
+                        <input type="email" name="email" id="email" placeholder="adresse@email.fr" required/>
+                    </div>
+                    <div class="field">
+                        <label for="dates">Soirées :*</label>
+                        <select id="dates" multiple required>
+                            <option value="05/08">05 août</option>
+                            <option value="06/08">06 août</option>
+                            <option value="07/08">07 août</option>
+                            <option value="08/08">08 août</option>
+                        </select>
+                    </div>
+                    <span class="select-help"><em>* :Appuyez sur la touche MAJ pour sélectionner plusieurs dates.</em></span>
+                    <div class="field">
+                        <label for="places">Nombre de places :</label>
+                        <select id="places" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6 +</option>
+                        </select>
+                    </div>
+                    <div class="field textarea">
+                        <label for="comment">Commentaire :</label>
+                        <textarea id="comment">Insérez un commentaire si vous le souhaitez.</textarea>
+                    </div>
+                    <div class="field submit">
+                        <input type="submit" id="submit" value="Envoyer">
+                    </div>
+                </form>
+            </article>
+        </section>
+    </div>
+    <footer>&copy; Festival des Films de Plein Air - 2017</footer>
+</div>
+</body>
+</html>
