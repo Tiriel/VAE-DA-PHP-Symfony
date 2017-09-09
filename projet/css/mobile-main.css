@@ -30,9 +30,10 @@ nav {
 }
 .hamburger {
     position: fixed;
-    left: 80%;
-    top: 7%;
+    left: 85%;
+    top: 40px;
     border-color: white;
+    z-index: 100;
 }
 a {
     text-decoration: none;
@@ -47,17 +48,21 @@ a:visited {
 .logo h1 {
     margin-top: 0;
     margin-bottom: -15px;
-    font-size: 200%;
+    font-size: 350%;
+    line-height: 80%;
 }
 .logo h4 {
     font-family: 'Raleway', sans-serif;
-    font-size: 80%;
+    font-size: 150%;
 }
 .menu {
     margin-right: 50px;
     position: relative;
+    left: -20px;
+    top: -30px;
     padding-right: 20px;
     background-color: rgba(17, 17, 17, 0.9);
+    width: 100%;
 }
 .navbar ul {
     list-style: none;
@@ -66,10 +71,10 @@ a:visited {
     justify-content: flex-end;
 }
 .navbar ul li {
-    font-size: 1.2em;
+    font-size: 3em;
     padding: 10px;
     width: 100%;
-    border-top: 1px solid lightgrey;
+    border-top: 1px solid dimgrey;
 }
 .content {
     margin-top: 140px;
@@ -80,7 +85,7 @@ a:visited {
 .home {
     width: 100%;
     height: 800px;
-    background: linear-gradient(rgba(200, 200, 200, 0), rgba(17, 17, 17, 1)), url("../img/home-481326196.jpg");
+    background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 1)), url("../img/home-481326196.jpg");
     background-position: center;
 }
 #presentation {
