@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Festival des Films de Plein Air - Accueil</title>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" media="only screen and (min-device-width : 320px) and (max-device-width : 480px)" href="./css/mobile-main.css" />
+    <link rel="stylesheet" media="only screen and (min-device-width : 736px)" href="./css/main.css" />
+    <link rel="stylesheet" media="only screen and (min-device-width : 320px) and (max-device-width : 736px)" href="./css/hamburger.css" />
+    <link rel="stylesheet" media="only screen and (min-device-width : 320px) and (max-device-width : 736px)" href="./css/mobile-main.css" />
 </head>
 <body>
 <div class="main">
     <nav>
-        <div class="logo">
-            <h1>
-                Festival des Films de Plein Air
-            </h1>
-            <h4>
-                Parc Monceau, Paris, 5 au 8 août
-            </h4>
-        </div>
         <button class="hamburger hamburger--spin" type="button">
             <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
             </span>
         </button>
-        <ul class="menu">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="films.html">Les films</a></li>
-            <li><a href="blog.html">Annonces</a></li>
-            <li><a href="inscriptions.html">Pré inscription</a></li>
-        </ul>
+        <div class="navbar">
+            <div class="logo">
+                <h1>
+                    Festival des Films de Plein Air
+                </h1>
+                <h4>
+                    Parc Monceau, Paris, 5 au 8 août
+                </h4>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="films.html">Les films</a></li>
+                    <li><a href="blog.html">Annonces</a></li>
+                    <li><a href="inscriptions.html">Pré inscription</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <div class="content">
         <header class="home"></header>
@@ -71,11 +76,12 @@
 <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        $('.hamburger').on('click', function (e) {
-            var $menu = $('.menu');
-//            $menu.toggleClass('hidden');
-            $menu.toggle();
-        })
+      if($('.hamburger').css('display') !== 'none') {
+        $('.menu').hide();
+      }
+      $('.hamburger').on('click', function (e) {
+        $('.menu').toggle();
+      })
     });
 </script>
 </body>

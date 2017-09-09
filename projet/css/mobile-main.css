@@ -8,6 +8,7 @@ body {
     background-color: #111;
     color: lightgrey;
     font-size: 1.2em;
+    overflow-wrap: break-word;
 }
 h1 {
     font-family: 'Playball', cursive;
@@ -24,11 +25,15 @@ nav {
     background-color: rgba(0, 39, 55, 0.8);
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    z-index: 100;
+    flex-direction: column;
+    justify-content: flex-start;
 }
-
+.hamburger {
+    position: fixed;
+    left: 80%;
+    top: 7%;
+    border-color: white;
+}
 a {
     text-decoration: none;
     color: lightgrey;
@@ -39,33 +44,32 @@ a:hover {
 a:visited {
     color: lightgrey;
 }
-.logo {
-    margin-top: -20px;
-}
 .logo h1 {
-    padding-top: 20px;
-    font-size: 250%;
-    line-height: 0;
+    margin-top: 0;
+    margin-bottom: -15px;
+    font-size: 200%;
 }
 .logo h4 {
-    margin-left: 80px;
     font-family: 'Raleway', sans-serif;
-}
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 50px;
-}
-.hidden {
-    display: none;
+    font-size: 80%;
 }
 .menu {
-    display: none;
+    margin-right: 50px;
+    position: relative;
+    padding-right: 20px;
+    background-color: rgba(17, 17, 17, 0.9);
 }
-nav ul li {
-    margin-right: 20px;
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.navbar ul li {
+    font-size: 1.2em;
+    padding: 10px;
+    width: 100%;
+    border-top: 1px solid lightgrey;
 }
 .content {
     margin-top: 140px;
@@ -80,7 +84,7 @@ nav ul li {
     background-position: center;
 }
 #presentation {
-    margin-top: -400px;
+    margin-top: -600px;
 }
 section {
     margin: auto;
@@ -94,8 +98,8 @@ article {
     margin-bottom: 100px;
 }
 article h1 {
-    font-size: 200%;
-    line-height: 0;
+    font-size: 2em;
+    margin-bottom: -15px;
 }
 article h2 {
     font-family: 'Raleway', sans-serif;
@@ -115,14 +119,15 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 20px;
-    width: 500px;
+    max-width: 500px;
     margin: auto;
 }
 .field {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     margin-top: 40px;
 }
 .select-help {
@@ -132,6 +137,8 @@ input, select {
     width: 300px;
     border: 1px solid white;
     border-radius: 2px;
+    font-size: 1.2em;
+    height: 30px;
 }
 textarea {
     width: 100%;
@@ -151,8 +158,6 @@ input[type=submit] {
 }
 .textarea {
     height: 200px;
-    flex-direction: column;
-    justify-content: space-between;
 }
 footer {
     width: 100%;
