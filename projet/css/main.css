@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Playball|Raleway');
+/*font-family: 'Raleway', sans-serif;*/
+/*font-family: 'Playball', cursive;*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+    color: lightgrey;
+    font-size: 1.2em;
+}
+h1 {
+    font-family: 'Playball', cursive;
+    font-weight: 500;
+    color: white;
+}
+.main {
+    margin: -10px;
+}
+nav {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    background-color: rgba(0, 39, 55, 0.8);
+    padding: 20px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: lightgrey;
+}
+a:hover {
+    color: deepskyblue;
+}
+a:visited {
+    color: lightgrey;
+}
+.logo {
+    margin-top: -20px;
+}
+.logo h1 {
+    padding-top: 20px;
+    font-size: 300%;
+    line-height: 0;
+}
+.logo h4 {
+    margin-left: 80px;
+    font-family: 'Raleway', sans-serif;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+}
+nav ul li {
+    margin-right: 20px;
+}
+.hamburger {
+    display: none;
+}
+.content {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.home {
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(rgba(200, 200, 200, 0), rgba(17, 17, 17, 1)), url("../img/home-481326196.jpg");
+    background-position: center;
+}
+#presentation {
+    margin-top: -400px;
+}
+section {
+    margin: auto;
+    width: 80%;
+}
+article {
+    clear: both;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+article h1 {
+    font-size: 200%;
+    line-height: 0;
+}
+article h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8em;
+}
+article img {
+    width: 200px;
+    height: 267px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+#inscriptions h1 {
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    width: 500px;
+    margin: auto;
+}
+.field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.select-help {
+    font-size: 0.8em;
+}
+input, select {
+    width: 300px;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+input[type=submit] {
+    width: 150px;
+    padding: 5px;
+    background-color: rgba(0, 39, 55, 0.8);
+    border: 1px solid #222;
+    color: lightgrey;
+}
+.submit {
+    justify-content: center;
+}
+.textarea {
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Festival des Films de Plein Air - Accueil</title>
+    <link rel="stylesheet" media="only screen and (min-device-width : 736px)" href="./css/main.css" />
+    <link rel="stylesheet" media="only screen and (min-device-width : 320px) and (max-device-width : 736px)" href="./css/hamburger.css" />
+    <link rel="stylesheet" media="only screen and (min-device-width : 320px) and (max-device-width : 736px)" href="./css/mobile-main.css" />
+</head>
+<body>
+<div class="main">
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <h1>
+                    Festival des Films de Plein Air
+                </h1>
+                <h4>
+                    Parc Monceau, Paris, 5 au 8 août
+                </h4>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="films.html">Les films</a></li>
+                    <li><a href="blog.html">Annonces</a></li>
+                    <li><a href="inscriptions.html">Pré inscription</a></li>
+                </ul>
+            </div>
+        </div>
+        <button class="hamburger hamburger--spin" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </nav>
+    <div class="content">
+        <section>
+            <article>
+                <h1>Film 1</h1>
+                <h2>Le 5 août à 22h</h2>
+                <img src="img/poster1.jpg" style="float: left"/>
+                <p>Admiral. Yes, Captain I think we've got something, sir. The report is only a fragment from a probe droid in the Hoth system, but it's the best lead we've had.
+                    We have thousands of probe droids searching the galaxy. I want proof, not leads! The visuals indicate life readings.
+                    It could mean anything. If we followed every lead... But, sir, the Hoth system is supposed to be devoid of human forms.
+                    You found something? Yes, my lord. That's it. The Rebels are there. My lord, there are so many uncharted settlements.
+                    It could be smugglers, it could be... hat is the system. And I'm sure Skywalker is with them.
+                    Set your course for the Hoth system. General Veers, prepare you men.</p>
+            </article>
+            <article>
+                <h1>Film 2</h1>
+                <h2>Le 6 août à 22h</h2>
+                <img src="img/poster2.jpg" style="float: right"/>
+                <p>Ben...Ben, please! Ben. Leia! Hear me! Leia! Luke...We've got to go back. What? I know where Luke is.
+                    But what about those fighter? Chewie, just do it. But what about Vader? All right, all right, all right.
+                    Bring my shuttle. Look, someone's up there. It's Luke. Chewie, slow down. Slow down and we'll get under him.
+                    Lando, open the top hatch. Okay. Easy, Chewie. Lando? Okay, let's go. Oh, Leia. All right, Chewie.
+                    Let's go. I'll be back.</p>
+            </article>
+            <article>
+                <h1>Film 3</h1>
+                <h2>Le 7 août à 22h</h2>
+                <img src="img/poster3.jpg" style="float: left"/>
+                <p>You must come along now, Artoo. There's really nothing more we can do. And my joints are freezing up.
+                    Don't say thing like that! Of course we'll see Master Luke again. He'll be quite all right, you'll see.
+                    Stupid little short-circuit. He'll be quite all right. Sir, all the patrols are in. There's still no contact from Skywalker or Solo.
+                    Mistress Leia, Artoo says he's been quite unable to pick up any signals, although he does admit that his own range is far too weak to abandon all hope.
+                    Your Highness, there's nothing more we can do tonight. The shield doors must be closed. Close the doors.
+                    Yes, sir.</p>
+            </article>
+            <article>
+                <h1>Film 4</h1>
+                <h2>Le 8 août à 22h</h2>
+                <img src="img/poster4.jpg" style="float: right"/>
+                <p>Oh. No one to meet us. I don't like this. Well, what would you like? Well, they did let us land.
+                    Look, don't worry. Everything's going to be fine. Trust me. See? My friend. Keep your eyes open, okay?
+                    Why, you slimy, double-crossing, no-good swindler! You've got a lot of guts coming here, after what you pulled.
+                    How you doing, you old pirate? So good to see you! Inever thought I'd catch up with you again.
+                    Where you been?</p>
+            </article>
+        </section>
+    </div>
+    <footer>&copy; Festival des Films de Plein Air - 2017</footer>
+</div>
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    if($('.hamburger').css('display') !== 'none') {
+      $('.menu').hide();
+    }
+    $('.hamburger').on('click', function (e) {
+      $('.menu').toggle();
+    })
+  });
+</script>
+</body>
+</html>

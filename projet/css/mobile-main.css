@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Playball|Raleway');
+/*font-family: 'Raleway', sans-serif;*/
+/*font-family: 'Playball', cursive;*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+    color: lightgrey;
+    font-size: 1.2em;
+    overflow-wrap: break-word;
+}
+h1 {
+    font-family: 'Playball', cursive;
+    font-weight: 500;
+    color: white;
+}
+.main {
+    margin: -10px;
+}
+nav {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    background-color: rgba(0, 39, 55, 0.8);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.hamburger {
+    position: fixed;
+    left: 85%;
+    top: 40px;
+    border-color: white;
+    z-index: 100;
+}
+a {
+    text-decoration: none;
+    color: lightgrey;
+}
+a:hover {
+    color: deepskyblue;
+}
+a:visited {
+    color: lightgrey;
+}
+.logo h1 {
+    margin-top: 0;
+    margin-bottom: -15px;
+    font-size: 350%;
+    line-height: 80%;
+}
+.logo h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 150%;
+}
+.menu {
+    margin-right: 50px;
+    position: relative;
+    left: -20px;
+    top: -30px;
+    padding-right: 20px;
+    background-color: rgba(17, 17, 17, 0.9);
+    width: 100%;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.navbar ul li {
+    font-size: 3em;
+    padding: 10px;
+    width: 100%;
+    border-top: 1px solid dimgrey;
+}
+.content {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.home {
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 1)), url("../img/home-481326196.jpg");
+    background-position: center;
+}
+#presentation {
+    margin-top: -600px;
+}
+section {
+    margin: auto;
+    width: 100%;
+}
+article {
+    clear: both;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 2em;
+}
+article h1 {
+    font-size: 2em;
+    margin-bottom: -15px;
+}
+article h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8em;
+}
+article img {
+    width: 200px;
+    height: 267px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+#inscriptions h1 {
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+.field {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.select-help {
+    font-size: 0.8em;
+}
+input, select {
+    width: 300px;
+    border: 1px solid white;
+    border-radius: 2px;
+    font-size: 1.2em;
+    height: 30px;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+input[type=submit] {
+    width: 150px;
+    padding: 5px;
+    background-color: rgba(0, 39, 55, 0.8);
+    border: 1px solid #222;
+    color: lightgrey;
+}
+.submit {
+    justify-content: center;
+}
+.textarea {
+    height: 200px;
+}
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
